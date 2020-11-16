@@ -78,6 +78,7 @@ class MGRequest:
                                                 "customerBankProvince")
         CUSTOMER_BANK_AREA = ArgRequestPair("customer_bank_area",
                                             "customerBankArea")
+        REDIRECT_URL = ArgRequestPair("redirect_url", "redirectUrl")
 
         @staticmethod
         def get_arg_names():
