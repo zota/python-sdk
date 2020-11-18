@@ -152,6 +152,13 @@ class MGPayoutRequest(MGRequest):
                            max_size=128,
                            required=False)
 
+        self._redirect_url = \
+            MGRequestParam(self.PayoutRequestParameters.REDIRECT_URL.request_param_name,
+                           kwargs.get(self.PayoutRequestParameters.REDIRECT_URL.arg_name,
+                                      None),
+                           max_size=128,
+                           required=True)
+
     @property
     def merchant_order_id(self):
         return self._merchant_order_id.param_value
@@ -310,6 +317,14 @@ class MGPayoutRequest(MGRequest):
 
     def set_custom_param(self, value):
         self._custom_param.set_value(value)
+        return self
+
+    @property
+    def redirect_url(self):
+        return self._redirect_url
+
+    def set_redirect_url(self, value):
+        self._redirect_url = value
         return self
 
     # def to_signed_payload(self, signature):
