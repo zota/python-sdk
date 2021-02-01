@@ -1,6 +1,9 @@
 [![codecov](https://codecov.io/gh/zotapay/python-sdk/branch/master/graph/badge.svg?token=5L1EYONUCU)](https://codecov.io/gh/zotapay/python-sdk)
 ![Python Matrix Test](https://github.com/zotapay/python-sdk/workflows/Python%20Matrix%20Test/badge.svg)
 
+![python-github](https://user-images.githubusercontent.com/174284/106497606-f0221600-64c6-11eb-9d98-a6ad1b355e6a.jpg)
+
+
 # Official Python REST API SDK
 This is the **official** page of the [Zotapay](http://www.zotapay.com) Python SDK. It is intended to be used by 
 developers who run modern Python applications and would like to integrate our next generation payments platform.
