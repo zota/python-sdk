@@ -1,3 +1,26 @@
 [build-system]
 requires = ["setuptools >= 40.6.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "zotapaysdk"
+version = "v1.1.4"
+authors = [
+  { name="Zota Technology LTD", email="open-source@zotapay.com" },
+]
+description = "SDK Implementation of Zota's REST API for merchants."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zotapay/python-sdk"
+"Bug Tracker" = "https://github.com/zotapay/python-sdk/issues"
