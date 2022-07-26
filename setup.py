@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+# Package version
 VERSION = "v1.1.4"
 
 setup(name='zotapaysdk',
