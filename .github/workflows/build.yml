@@ -10,9 +10,7 @@ on:
       - 'examples/**'
       - 'README.md'
   pull_request:
-    branches:
-      - main
-    types: [ opened, synchronize ]
+    types: [ assigned, opened, synchronize, reopened ]
 
 jobs:
   build:
