@@ -321,10 +321,10 @@ class MGPayoutRequest(MGRequest):
 
     @property
     def redirect_url(self):
-        return self._redirect_url
+        return self._redirect_url.param_value
 
     def set_redirect_url(self, value):
-        self._redirect_url = value
+        self._redirect_url.set_value = value
         return self
 
     # def to_signed_payload(self, signature):
