@@ -158,6 +158,42 @@ class MGPayoutRequest(MGRequest):
                                       None),
                            max_size=128,
                            required=True)
+        self._customer_country_code = \
+            MGRequestParam(self.PayoutRequestParameters.CUSTOMER_COUNTRY_CODE.request_param_name,
+                           kwargs.get(self.PayoutRequestParameters.CUSTOMER_COUNTRY_CODE.arg_name,
+                                      None),
+                           max_size=2,
+                           required=False)
+        self._customer_personal_id = \
+                    MGRequestParam(self.PayoutRequestParameters.CUSTOMER_PERSONAL_ID.request_param_name,
+                                   kwargs.get(self.PayoutRequestParameters.CUSTOMER_PERSONAL_ID.arg_name,
+                                              None),
+                                   max_size=20,
+                                   required=False)
+        self._customer_bank_account_number_digit = \
+                    MGRequestParam(self.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER_DIGIT.request_param_name,
+                                   kwargs.get(self.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER_DIGIT.arg_name,
+                                              None),
+                                   max_size=2,
+                                   required=False)
+        self._customer_bank_account_type = \
+                    MGRequestParam(self.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_TYPE.request_param_name,
+                                   kwargs.get(self.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_TYPE.arg_name,
+                                              None),
+                                   max_size=8,
+                                   required=False)
+        self._customer_bank_swift_code = \
+                    MGRequestParam(self.PayoutRequestParameters.CUSTOMER_BANK_SWIFT_CODE.request_param_name,
+                                   kwargs.get(self.PayoutRequestParameters.CUSTOMER_BANK_SWIFT_CODE.arg_name,
+                                              None),
+                                   max_size=35,
+                                   required=False)
+        self._customer_bank_branch_digit = \
+                    MGRequestParam(self.PayoutRequestParameters.CUSTOMER_BANK_BRANCH_DIGIT.request_param_name,
+                                   kwargs.get(self.PayoutRequestParameters.CUSTOMER_BANK_BRANCH_DIGIT.arg_name,
+                                              None),
+                                   max_size=2,
+                                   required=False)
 
     @property
     def merchant_order_id(self):
@@ -325,6 +361,54 @@ class MGPayoutRequest(MGRequest):
 
     def set_redirect_url(self, value):
         self._redirect_url.set_value = value
+        return self
+
+    @property
+    def customer_country_code(self):
+        return self._customer_country_code.param_value
+
+    def set_customer_country_code(self, value):
+        self._customer_country_code.set_value(value)
+        return self
+
+    @property
+    def customer_personal_id(self):
+        return self._customer_personal_id.param_value
+
+    def set_customer_personal_id(self, value):
+        self._customer_personal_id.set_value(value)
+        return self
+
+    @property
+    def customer_bank_account_number_digit(self):
+        return self._customer_bank_account_number_digit.param_value
+
+    def set_customer_bank_account_number_digit(self, value):
+        self._customer_bank_account_number_digit.set_value(value)
+        return self
+
+    @property
+    def customer_bank_account_type(self):
+        return self._customer_bank_account_type.param_value
+
+    def set_customer_bank_account_type(self, value):
+        self._customer_bank_account_type.set_value(value)
+        return self
+
+    @property
+    def customer_bank_swift_code(self):
+        return self._customer_bank_swift_code.param_value
+
+    def set_customer_bank_swift_code(self, value):
+        self._customer_bank_swift_code.set_value(value)
+        return self
+
+    @property
+    def customer_bank_branch_digit(self):
+        return self._customer_bank_branch_digit.param_value
+
+    def set_customer_bank_branch_digit(self, value):
+        self._customer_bank_branch_digit.set_value(value)
         return self
 
     # def to_signed_payload(self, signature):
