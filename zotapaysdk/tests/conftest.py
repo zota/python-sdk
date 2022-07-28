@@ -93,7 +93,14 @@ def example_payout_payload():
                            customer_bank_area="Bank Area / City",
                            customer_bank_routing_number="000",
                            custom_param="{\"UserId\": \"e139b447\"}",
-                           checkout_url="https://www.example-merchant.com/account/withdrawal/?uid=e139b447")
+                           checkout_url="https://www.example-merchant.com/account/withdrawal/?uid=e139b447",
+                           redirect_url="https://exampleredirect.com",
+                           customer_country_code="TH",
+                           customer_personal_id="12345678",
+                           customer_bank_account_number_digit="02",
+                           customer_bank_account_type="03",
+                           customer_bank_swift_code="123456789",
+                           customer_bank_branch_digit="04")
     return example_payload
 
 

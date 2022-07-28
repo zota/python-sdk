@@ -360,7 +360,7 @@ class MGPayoutRequest(MGRequest):
         return self._redirect_url.param_value
 
     def set_redirect_url(self, value):
-        self._redirect_url.set_value = value
+        self._redirect_url.set_value(value)
         return self
 
     @property
