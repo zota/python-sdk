@@ -250,6 +250,41 @@ def generate_test_payout(amount=500, currency="USD", **kwargs):
     payout_request[MGRequest.PayoutRequestParameters.CUSTOM_PARAM.arg_name] = \
         custom_param if custom_param else "{\"UserId\": \"e139b447\"}"
 
+    redirect_url = kwargs.get(MGRequest.PayoutRequestParameters.REDIRECT_URL.arg_name,
+                                  None)
+    payout_request[MGRequest.PayoutRequestParameters.REDIRECT_URL.arg_name] = \
+        redirect_url if redirect_url else "https://exampleredirecturl.com"
+
+    customer_country_code = kwargs.get(MGRequest.PayoutRequestParameters.CUSTOMER_COUNTRY_CODE.arg_name,
+                                  None)
+    payout_request[MGRequest.PayoutRequestParameters.CUSTOMER_COUNTRY_CODE.arg_name] = \
+        customer_country_code if customer_country_code else "TH"
+
+    customer_personal_id = kwargs.get(MGRequest.PayoutRequestParameters.CUSTOMER_PERSONAL_ID.arg_name,
+                                      None)
+    payout_request[MGRequest.PayoutRequestParameters.CUSTOMER_PERSONAL_ID.arg_name] = \
+        customer_personal_id if customer_personal_id else "12345678"
+
+    customer_bank_account_number_digit = kwargs.get(MGRequest.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER_DIGIT.arg_name,
+                                  None)
+    payout_request[MGRequest.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER_DIGIT.arg_name] = \
+        customer_bank_account_number_digit if customer_bank_account_number_digit else "02"
+
+    customer_bank_account_type = kwargs.get(MGRequest.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_TYPE.arg_name,
+                                      None)
+    payout_request[MGRequest.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_TYPE.arg_name] = \
+        customer_bank_account_type if customer_bank_account_type else "03"
+
+    customer_bank_swift_code = kwargs.get(MGRequest.PayoutRequestParameters.CUSTOMER_BANK_SWIFT_CODE.arg_name,
+                                  None)
+    payout_request[MGRequest.PayoutRequestParameters.CUSTOMER_BANK_SWIFT_CODE.arg_name] = \
+        customer_bank_swift_code if customer_bank_swift_code else "123456789"
+
+    customer_bank_branch_digit = kwargs.get(MGRequest.PayoutRequestParameters.CUSTOMER_BANK_BRANCH_DIGIT.arg_name,
+                                  None)
+    payout_request[MGRequest.PayoutRequestParameters.CUSTOMER_BANK_BRANCH_DIGIT.arg_name] = \
+        customer_bank_branch_digit if customer_bank_branch_digit else "04"
+
     return payout_request
 
 

@@ -81,7 +81,7 @@ class MGRequest:
         REDIRECT_URL = ArgRequestPair("redirect_url", "redirectUrl")
 
         CUSTOMER_COUNTRY_CODE = ArgRequestPair("customer_country_code", "customerCountryCode")
-        CUSTOMER_PERSONAL_ID = ArgRequestPair("customer_personal_id", "customerPersonalId")
+        CUSTOMER_PERSONAL_ID = ArgRequestPair("customer_personal_id", "customerPersonalID")
         CUSTOMER_BANK_ACCOUNT_NUMBER_DIGIT = ArgRequestPair("customer_bank_account_number_digit",
                                                             "customerBankAccountNumberDigit")
         CUSTOMER_BANK_ACCOUNT_TYPE = ArgRequestPair("customer_bank_account_type", "customerBankAccountType")
