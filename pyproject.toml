@@ -4,6 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zotapaysdk"
+dynamic = ['dependencies']
 version = "v1.1.4"
 authors = [
   { name="Zota Technology LTD", email="open-source@zotapay.com" },
