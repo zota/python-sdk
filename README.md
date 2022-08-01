@@ -1,5 +1,7 @@
 [![codecov](https://codecov.io/gh/zotapay/python-sdk/branch/master/graph/badge.svg?token=5L1EYONUCU)](https://codecov.io/gh/zotapay/python-sdk)
 ![Python Matrix Test](https://github.com/zotapay/python-sdk/workflows/Python%20Matrix%20Test/badge.svg)
+[![PyPI](https://img.shields.io/badge/pypi-v1.0.0-blue)](https://pypi.org/project/zotapaysdk/)
+[![Python Versions](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)](https://pypi.org/project/zotapaysdk/)
 
 ![python-github](https://user-images.githubusercontent.com/174284/106497606-f0221600-64c6-11eb-9d98-a6ad1b355e6a.jpg)
 
