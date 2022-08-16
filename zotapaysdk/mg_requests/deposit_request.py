@@ -84,7 +84,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.ORDER_AMOUNT.arg_name,
                                None),
-                           max_size=12,
+                           max_size=24,
                            required=True)
 
         self._order_currency = \
@@ -108,7 +108,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CUSTOMER_FIRST_NAME.arg_name,
                                None),
-                           max_size=50,
+                           max_size=128,
                            required=True)
 
         self._customer_last_name = \
@@ -116,7 +116,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CUSTOMER_LAST_NAME.arg_name,
                                None),
-                           max_size=50,
+                           max_size=128,
                            required=True)
 
         self._customer_address = \
@@ -124,7 +124,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CUSTOMER_ADDRESS.arg_name,
                                None),
-                           max_size=50,
+                           max_size=128,
                            required=True)
 
         self._customer_country_code = \
@@ -140,7 +140,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CUSTOMER_CITY.arg_name,
                                None),
-                           max_size=50,
+                           max_size=128,
                            required=True)
 
         self._customer_state = \
@@ -156,7 +156,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CUSTOMER_ZIP_CODE.arg_name,
                                None),
-                           max_size=10,
+                           max_size=15,
                            required=True)
 
         self._customer_phone = \
@@ -172,7 +172,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CUSTOMER_IP.arg_name,
                                None),
-                           max_size=20,
+                           max_size=64,
                            required=True)
 
         self._customer_bank_code = \
@@ -180,7 +180,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CUSTOMER_BANK_CODE.arg_name,
                                None),
-                           max_size=8,
+                           max_size=11,
                            required=False)
 
         self._redirect_url = \
@@ -188,7 +188,7 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.REDIRECT_URL.arg_name,
                                None),
-                           max_size=128,
+                           max_size=255,
                            required=True)
 
         self._callback_url = \
@@ -196,13 +196,13 @@ class MGDepositRequest(MGRequest):
                            kwargs.get(
                                self.DepositRequestParameters.CALLBACK_URL.arg_name,
                                None),
-                           max_size=128,
+                           max_size=255,
                            required=False)
 
         self._checkout_url = \
             MGRequestParam(self.DepositRequestParameters.CHECKOUT_URL.request_param_name,
                            kwargs.get(self.DepositRequestParameters.CHECKOUT_URL.arg_name, None),
-                           max_size=128,
+                           max_size=255,
                            required=True)
 
         self._custom_param = \
