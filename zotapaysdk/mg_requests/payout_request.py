@@ -24,7 +24,7 @@ class MGPayoutRequest(MGRequest):
             MGRequestParam(self.PayoutRequestParameters.ORDER_AMOUNT.request_param_name,
                            kwargs.get(self.PayoutRequestParameters.ORDER_AMOUNT.arg_name,
                                       None),
-                           max_size=12,
+                           max_size=24,
                            required=True)
 
         self._order_currency = \
@@ -46,7 +46,7 @@ class MGPayoutRequest(MGRequest):
                            kwargs.get(
                                self.PayoutRequestParameters.CUSTOMER_FIRST_NAME.arg_name,
                                None),
-                           max_size=50,
+                           max_size=128,
                            required=True)
 
         self._customer_last_name = \
@@ -54,7 +54,7 @@ class MGPayoutRequest(MGRequest):
                            kwargs.get(
                                self.PayoutRequestParameters.CUSTOMER_LAST_NAME.arg_name,
                                None),
-                           max_size=50,
+                           max_size=128,
                            required=True)
 
         self._customer_phone = \
@@ -70,14 +70,14 @@ class MGPayoutRequest(MGRequest):
                            kwargs.get(
                                self.PayoutRequestParameters.CUSTOMER_IP.arg_name,
                                None),
-                           max_size=20,
+                           max_size=64,
                            required=True)
 
         self._customer_bank_code = \
             MGRequestParam(self.PayoutRequestParameters.CUSTOMER_BANK_CODE.request_param_name,
                            kwargs.get(self.PayoutRequestParameters.CUSTOMER_BANK_CODE.arg_name,
                                       None),
-                           max_size=8,
+                           max_size=11,
                            required=False)
 
         self._customer_bank_account_number = \
@@ -85,7 +85,7 @@ class MGPayoutRequest(MGRequest):
                 self.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER.request_param_name,
                 kwargs.get(self.PayoutRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER.arg_name,
                            None),
-                max_size=15,
+                max_size=64,
                 required=True)
 
         self._customer_bank_account_name = \
@@ -120,7 +120,7 @@ class MGPayoutRequest(MGRequest):
             MGRequestParam(self.PayoutRequestParameters.CUSTOMER_BANK_ROUTING_NUMBER.request_param_name,
                            kwargs.get(self.PayoutRequestParameters.CUSTOMER_BANK_ROUTING_NUMBER.arg_name,
                                       None),
-                           max_size=16,
+                           max_size=64,
                            required=False)
 
         self._customer_bank_province = \
@@ -142,7 +142,7 @@ class MGPayoutRequest(MGRequest):
                            kwargs.get(
                                self.PayoutRequestParameters.CALLBACK_URL.arg_name,
                                None),
-                           max_size=128,
+                           max_size=255,
                            required=False)
 
         self._custom_param = \
@@ -156,7 +156,7 @@ class MGPayoutRequest(MGRequest):
             MGRequestParam(self.PayoutRequestParameters.REDIRECT_URL.request_param_name,
                            kwargs.get(self.PayoutRequestParameters.REDIRECT_URL.arg_name,
                                       None),
-                           max_size=128,
+                           max_size=255,
                            required=True)
         self._customer_country_code = \
             MGRequestParam(self.PayoutRequestParameters.CUSTOMER_COUNTRY_CODE.request_param_name,
