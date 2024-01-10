@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 # Package version
-VERSION = "v1.1.6"
+VERSION = "1.1.6"
 
 setup(name='zotasdk',
     version=VERSION,
