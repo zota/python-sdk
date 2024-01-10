@@ -1,7 +1,7 @@
 # pylint: disable=missing-module-docstring
 import json
-from zotapaysdk.helpers import HTTP_STATUS_OK
-from zotapaysdk.mg_requests.response import MGResponse
+from zotasdk.helpers import HTTP_STATUS_OK
+from zotasdk.mg_requests.response import MGResponse
 
 
 class MGCardDepositResponse(MGResponse):

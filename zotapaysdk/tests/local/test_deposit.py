@@ -1,13 +1,13 @@
 import pytest
-from zotapaysdk.mg_requests import MGDepositResponse
-from zotapaysdk.client import MGClient
-from zotapaysdk.urls import MGUrlsFormatter
-from zotapaysdk.mg_requests import MGCardDepositResponse
-from zotapaysdk.exceptions import MGException
-from zotapaysdk.testing_tools import generate_test_order, TestCreditCards, MockResponse, \
+from zotasdk.mg_requests import MGDepositResponse
+from zotasdk.client import MGClient
+from zotasdk.urls import MGUrlsFormatter
+from zotasdk.mg_requests import MGCardDepositResponse
+from zotasdk.exceptions import MGException
+from zotasdk.testing_tools import generate_test_order, TestCreditCards, MockResponse, \
     generate_test_order_with_ok_response
-from zotapaysdk.mg_requests import MGDepositRequest
-from zotapaysdk.mg_requests import MGCardDepositRequest
+from zotasdk.mg_requests import MGDepositRequest
+from zotasdk.mg_requests import MGCardDepositRequest
 
 
 def test_deposit_ok(httpserver):

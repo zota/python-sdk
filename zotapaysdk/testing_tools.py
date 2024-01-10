@@ -1,9 +1,9 @@
 import uuid
 import json
 
-from zotapaysdk.mg_requests.payout_response import MGPayoutResponse
-from zotapaysdk.mg_requests import MGDepositResponse, MGCardDepositResponse, MGOrderStatusRequest
-from zotapaysdk.mg_requests.mg_request import MGRequest
+from zotasdk.mg_requests.payout_response import MGPayoutResponse
+from zotasdk.mg_requests import MGDepositResponse, MGCardDepositResponse, MGOrderStatusRequest
+from zotasdk.mg_requests.mg_request import MGRequest
 
 
 class MockResponse:
@@ -19,7 +19,7 @@ class MockResponse:
 
 class TestCreditCards:
     """
-    Contains all the test cards that can be used against the ZotaPay Sandbox API
+    Contains all the test cards that can be used against the Zota Sandbox API
     """
     @staticmethod
     def visa_approved_no_3d():
@@ -140,7 +140,7 @@ def generate_test_order_with_ok_response(amount=500, currency="USD", **kwargs):
             MGOrderStatusRequest.MGOrderStatus.PROCESSING
     else:
         response_payload[MGDepositResponse.Fields.DATA][MGDepositResponse.Fields.DEPOSIT_URL] = \
-            "https://api.zotapay.com/api/v1/deposit/init/8b3a6b89697e8ac8f45d964bcc90c7ba41764acd/"
+            "https://api.zota.com/api/v1/deposit/init/8b3a6b89697e8ac8f45d964bcc90c7ba41764acd/"
 
     return deposit_payload, response_payload
 

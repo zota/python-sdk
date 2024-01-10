@@ -1,4 +1,4 @@
-from zotapaysdk.mg_requests.validation import default_validation_function
+from zotasdk.mg_requests.validation import default_validation_function
 
 
 class MGRequestParam:

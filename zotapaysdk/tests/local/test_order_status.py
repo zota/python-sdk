@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock
 
-from zotapaysdk.testing_tools import MockResponse
-from zotapaysdk.mg_requests import MGOrderStatusRequest
+from zotasdk.testing_tools import MockResponse
+from zotasdk.mg_requests import MGOrderStatusRequest
 
 
 def test_mg_order_status_response_ok(monkeypatch, mg_client_myr_sa, example_deposit_payload,

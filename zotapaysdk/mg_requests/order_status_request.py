@@ -1,5 +1,5 @@
-from zotapaysdk.mg_requests.objects import MGRequestParam
-from zotapaysdk.mg_requests.mg_request import MGRequest
+from zotasdk.mg_requests.objects import MGRequestParam
+from zotasdk.mg_requests.mg_request import MGRequest
 
 
 class MGOrderStatusRequest(MGRequest):
@@ -11,7 +11,7 @@ class MGOrderStatusRequest(MGRequest):
         """
         Definition of all the possible statuses of an order.
 
-        See https://mg-docs.zotapay.com/payout/1.0/#common-resources
+        See https://mg-docs.zota.com/payout/1.0/#common-resources
         """
         CREATED = "CREATED"
         PROCESSING = "PROCESSING"
@@ -24,7 +24,7 @@ class MGOrderStatusRequest(MGRequest):
 
     def __init__(self, **kwargs):
         """
-            See Also https://doc.zotapay.com/deposit/1.0/?python#issue-an-order-status-request
+            See Also https://doc.zota.com/deposit/1.0/?python#issue-an-order-status-request
         Args:
             **kwargs:
         """

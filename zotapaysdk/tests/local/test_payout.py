@@ -1,7 +1,7 @@
-from zotapaysdk.testing_tools import generate_test_payout_w_ok_response, MockResponse, \
+from zotasdk.testing_tools import generate_test_payout_w_ok_response, MockResponse, \
     generate_test_payout_w_nok_response
-from zotapaysdk.mg_requests.payout_response import MGPayoutResponse
-from zotapaysdk.mg_requests.payout_request import MGPayoutRequest
+from zotasdk.mg_requests.payout_response import MGPayoutResponse
+from zotasdk.mg_requests.payout_request import MGPayoutRequest
 
 
 def test_payout_request_object_init(example_payout_payload):

@@ -3,7 +3,7 @@
 """
 from unittest.mock import MagicMock
 
-from zotapaysdk.mg_requests import \
+from zotasdk.mg_requests import \
     (
         MGPayoutRequest,
         MGOrderStatusRequest,
@@ -11,7 +11,7 @@ from zotapaysdk.mg_requests import \
         MGDepositRequest
     )
 
-from zotapaysdk.testing_tools import generate_test_order, TestCreditCards, generate_test_payout
+from zotasdk.testing_tools import generate_test_order, TestCreditCards, generate_test_payout
 
 
 def test_mg_deposit_request_sandbox_ok_myr(mg_client_myr_sa):

@@ -6,33 +6,33 @@ from hashlib import sha256
 import sys
 import requests
 
-from zotapaysdk.constants import POST, GET
-from zotapaysdk.helpers import UA_STRING
-from zotapaysdk.mg_comms import mg_request
-from zotapaysdk.mg_requests.payout_response import MGPayoutResponse
-from zotapaysdk.exceptions import MGException
-from zotapaysdk.urls import MGUrlsFormatter
-from zotapaysdk.config import MGCredentialsManager
-from zotapaysdk.mg_requests import (
+from zotasdk.constants import POST, GET
+from zotasdk.helpers import UA_STRING
+from zotasdk.mg_comms import mg_request
+from zotasdk.mg_requests.payout_response import MGPayoutResponse
+from zotasdk.exceptions import MGException
+from zotasdk.urls import MGUrlsFormatter
+from zotasdk.config import MGCredentialsManager
+from zotasdk.mg_requests import (
     MGCardDepositResponse,
     MGOrderStatusResponse,
     MGCardDepositRequest,
     MGDepositRequest)
-from zotapaysdk.mg_requests import MGDepositResponse
-import zotapaysdk
+from zotasdk.mg_requests import MGDepositResponse
+import zotasdk
 
 
 class MGClient:
 
-    LIVE_API_URL = "https://api.zotapay.com"
-    SANDBOX_API_URL = "https://api.zotapay-sandbox.com"
+    LIVE_API_URL = "https://api.zota.com"
+    SANDBOX_API_URL = "https://api.zota-sandbox.com"
 
     def __init__(self, merchant_id=None, merchant_secret_key=None, endpoint_id=None,
                  request_url=None):
         """
         Main client for working with Zotapay's API.
 
-        See more info https://doc.zotapay.com/deposit/1.0/?python#introduction
+        See more info https://doc.zota.com/deposit/1.0/?python#introduction
 
         Args:
             merchant_id: A merchant unique identifier, used for identification.
@@ -90,7 +90,7 @@ class MGClient:
         """
         Returns the url where deposit requests should be sent.
 
-        https://doc.zotapay.com/deposit/1.0/?python#deposit-request
+        https://doc.zota.com/deposit/1.0/?python#deposit-request
 
         Returns:
 
@@ -102,7 +102,7 @@ class MGClient:
         """
         Returns the url where order status check requests should be sent.
 
-        https://doc.zotapay.com/deposit/1.0/?python#order-status-request
+        https://doc.zota.com/deposit/1.0/?python#order-status-request
 
         Returns:
 
@@ -114,7 +114,7 @@ class MGClient:
         """
         Returns the url where payout requests should be sent.
 
-        https://mg-docs.zotapay.com/payout/1.0/#payout-request
+        https://mg-docs.zota.com/payout/1.0/#payout-request
 
         Returns:
 
@@ -125,7 +125,7 @@ class MGClient:
         """
         Generates the signature for Deposit Requests as expected by Zotapay's API.
 
-        See https://doc.zotapay.com/deposit/1.0/?python#signature
+        See https://doc.zota.com/deposit/1.0/?python#signature
 
         Args:
             deposit_request: An instance of the Deposit Request that is to be signed
@@ -155,7 +155,7 @@ class MGClient:
         """
         Generates the signature for Order Status Requests as expected by Zotapay's API.
 
-        See https://doc.zotapay.com/deposit/1.0/?python#signature-2
+        See https://doc.zota.com/deposit/1.0/?python#signature-2
 
         Args:
             order_status_request (MGOrderStatusRequest): An instance of the status request
@@ -183,9 +183,9 @@ class MGClient:
 
     def _generate_payout_request_signature(self, payout_request):
         """
-        Generates the signature for Payout Requests as expected by ZotaPay's API.
+        Generates the signature for Payout Requests as expected by Zota's API.
 
-        See https://mg-docs.zotapay.com/payout/1.0/#signature
+        See https://mg-docs.zota.com/payout/1.0/#signature
 
         Args:
             payout_request (MGPayoutRequest): An instance of the payout request
@@ -218,7 +218,7 @@ class MGClient:
 
         Returns:
             Example:
-                zotapaysdk/0.1
+                zotasdk/0.1
                 (
                     Darwin; 19.3.0;
                     Darwin Kernel Version 19.3.0:
@@ -237,7 +237,7 @@ class MGClient:
         _system = os.uname()
         user_agent = UA_STRING.format(
             **{
-                'sdk_version': zotapaysdk.__version__,
+                'sdk_version': zotasdk.__version__,
                 'os_sysname': getattr(_system, "sysname", "-"),
                 'os_release': getattr(_system, "release", "-"),
                 "os_version": getattr(_system, "version", "-"),
@@ -292,7 +292,7 @@ class MGClient:
     def _assert_all_values_as_strings(self, payload):
         """
         Iterates over the request payload and ensures that all values are cast to strings
-        as expected by the ZotaPay API.
+        as expected by the Zota API.
 
         Args:
             payload (dict): A dict of parameters that are to be send as the API call payload.
@@ -306,7 +306,7 @@ class MGClient:
 
     def _send_deposit_request(self, deposit_request):
         """
-        Sends a general deposit request to the ZotaPay API
+        Sends a general deposit request to the Zota API
 
         Args:
             deposit_request (MGDepositRequest):

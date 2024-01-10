@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods,missing-module-docstring
 from configparser import RawConfigParser
-from zotapaysdk.exceptions import MGMissingCredentialsException
+from zotasdk.exceptions import MGMissingCredentialsException
 from os.path import expanduser
 import os
 
@@ -103,7 +103,7 @@ class MGCredentialsManager:
         Parses the credentials from the keyword parameters, environment variables
         or a config file in this strict order.
 
-        See Also https://doc.zotapay.com/deposit/1.0/?python#before-you-begin
+        See Also https://doc.zota.com/deposit/1.0/?python#before-you-begin
 
         Args:
             merchant_id:

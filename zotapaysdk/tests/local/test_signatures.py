@@ -1,5 +1,5 @@
-from zotapaysdk.mg_requests.payout_request import MGPayoutRequest
-from zotapaysdk.mg_requests import MGDepositRequest
+from zotasdk.mg_requests.payout_request import MGPayoutRequest
+from zotasdk.mg_requests import MGDepositRequest
 
 
 def test_mg_deposit_signature(mg_client_myr_sa, example_deposit_payload):

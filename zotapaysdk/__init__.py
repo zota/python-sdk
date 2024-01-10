@@ -1,5 +1,5 @@
 __version__ = "0.1"
-from zotapaysdk.client import MGClient
+from zotasdk.client import MGClient
 
 
 __all__ = ["MGClient"]

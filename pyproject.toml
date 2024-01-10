@@ -3,16 +3,16 @@ requires = ["setuptools >= 40.6.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "zotapaysdk"
+name = "zotasdk"
 dynamic = ['dependencies']
 version = "v1.1.6"
 authors = [
-  { name="Zota Technology LTD", email="open-source@zotapay.com" },
+  { name="Zota Technology Pte Ltd", email="open-source@zota.com" },
 ]
 description = "SDK Implementation of Zota's REST API for merchants."
 readme = "README.md"
 license = { file="LICENSE" }
-requires-python = ">=3.6"
+requires-python = ">=3.8"
 classifiers = [
     "Development Status :: 6 - Mature",
     "Intended Audience :: Information Technology",

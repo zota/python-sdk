@@ -1,8 +1,8 @@
 """
 Definition of the Deposit Request object.
 """
-from zotapaysdk.mg_requests.mg_request import MGRequest
-from zotapaysdk.mg_requests.objects import MGRequestParam
+from zotasdk.mg_requests.mg_request import MGRequest
+from zotasdk.mg_requests.objects import MGRequestParam
 
 
 class MGDepositRequest(MGRequest):
@@ -16,7 +16,7 @@ class MGDepositRequest(MGRequest):
 
     def __init__(self, **kwargs):  # pylint: disable=too-many-instance-attributes
         """
-        See https://doc.zotapay.com/deposit/1.0/?python#deposit-request for more info.
+        See https://doc.zota.com/deposit/1.0/?python#deposit-request for more info.
 
 
         :param merchant_order_id:

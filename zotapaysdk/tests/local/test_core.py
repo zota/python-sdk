@@ -1,4 +1,4 @@
-from zotapaysdk.mg_requests.objects import MGRequestParam
+from zotasdk.mg_requests.objects import MGRequestParam
 
 
 def test_mg_request_pair_general_ok(monkeypatch):

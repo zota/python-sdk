@@ -1,44 +1,45 @@
-[![PyPI](https://img.shields.io/badge/zotasdk-v1.1.6-blue)](https://pypi.org/project/zotapaysdk/)
-[![codecov](https://codecov.io/gh/zotapay/python-sdk/branch/master/graph/badge.svg?token=5L1EYONUCU)](https://codecov.io/gh/zotapay/python-sdk)
-![Python Matrix Test](https://github.com/zotapay/python-sdk/workflows/Python%20Matrix%20Test/badge.svg)
-[![Python Versions](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)](https://pypi.org/project/zotapaysdk/)
+[![PyPI](https://img.shields.io/badge/zotasdk-v1.1.6-blue)](https://pypi.org/project/zotasdk/)
+[![codecov](https://codecov.io/gh/zota/python-sdk/branch/master/graph/badge.svg?token=5L1EYONUCU)](https://codecov.io/gh/zota/python-sdk)
+![Python Matrix Test](https://github.com/zota/python-sdk/workflows/Python%20Matrix%20Test/badge.svg)
+[![Python Versions](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)](https://pypi.org/project/zotasdk/)
 
 ![python-github](https://user-images.githubusercontent.com/174284/106497606-f0221600-64c6-11eb-9d98-a6ad1b355e6a.jpg)
 
-
 # Official Python REST API SDK
-This is the **official** page of the [Zotapay](http://www.zotapay.com) Python SDK. It is intended to be used by 
+
+This is the **official** page of the [Zotapay](http://www.zota.com) Python SDK. It is intended to be used by
 developers who run modern Python applications and would like to integrate our next generation payments platform.
 
- 
 ## REST API Docs
 
-> **[Official Deposit Documentation](https://doc.zotapay.com/deposit/1.0/#introduction)**
+> **[Official Deposit Documentation](https://doc.zota.com/deposit/1.0/#introduction)**
 
-> **[Official Payout Documentation](https://doc.zotapay.com/payout/1.0/#introduction)**
-
+> **[Official Payout Documentation](https://doc.zota.com/payout/1.0/#introduction)**
 
 ## Introduction
-This Python SDK provides all the necessary methods for integrating the Zotapay Merchant API. 
+
+This Python SDK provides all the necessary methods for integrating the Zotapay Merchant API.
 This SDK is to be used by clients, as well as all the related eCommerce plugins for Python applications.
 
-The SDK covers all available functionality that ZotaPay's Merchant API exposes.
+The SDK covers all available functionality that Zota's Merchant API exposes.
 
 ### Requirements
+
 * A functioning Zotapay Sandbox or Production account and related credentials
 * Python 3.5 (or higher)
 
 ### Installation
-```sh
-pip install zotapaysdk
-```
 
+```sh
+pip install zotasdk
+```
 
 ## Configuration
 
-[API CONFIGURATION DOCS](https://doc.zotapay.com/deposit/1.0/?python#before-you-begin)
+[API CONFIGURATION DOCS](https://doc.zota.com/deposit/1.0/?python#before-you-begin)
 
 Credentials for the SDK can be passed in 3 different ways:
+
 1. To the `MGClient` itself
 2. Through environment variables
 3. Through a configuration file
@@ -50,34 +51,36 @@ This part of the documentation will guide you on how to configure and use this S
 To use this API, obtain the following credentials from Zotapay:
 
 ```
-MerchantID	        A merchant unique identifier, used for identification.
-MerchantSecretKey	A secret key to keep privately and securely, used for authentication.
-EndpointID	        One or more unique endpoint identifiers to use in API requests.
+MerchantID         A merchant unique identifier, used for identification.
+MerchantSecretKey A secret key to keep privately and securely, used for authentication.
+EndpointID         One or more unique endpoint identifiers to use in API requests.
 ```
 
-Contact [Zotapay](https://zotapay.com/contact/) to start your onboarding process and obtain all the credentials.
+Contact [Zotapay](https://zota.com/contact/) to start your onboarding process and obtain all the credentials.
 
 ### API Url
+
 There are two environments to use with the Zotapay API:
 
 > Sandbox environment, used for integration and testing purposes.
-`https://api.zotapay-sandbox.com`
+`https://api.zota-sandbox.com`
 
 > Live environment.
-`https://api.zotapay.com`
+`https://api.zota.com`
 
 ### Configuration in the code
 
-The implementation fo the Zotapay API SDK depends on creating an instance of the `MGClient`. First priority 
+The implementation fo the Zotapay API SDK depends on creating an instance of the `MGClient`. First priority
 configuration is the one passed to the client itself.
 
 Example:
+
 ```python
-client = zotapaysdk.MGClient(
+client = zotasdk.MGClient(
     merchant_id=<MerchantID as received from Zotapay>, 
     merchant_secret_key=<MerchantSecretKey as received from Zotapay>, 
     endpoint_id=<EndpointID as received from Zotapay>, 
-    request_url=<MGClient.LIVE_API_URL or MGClient.SANDBOX_API_URL or "https://api.zotapay-sandbox.com"...>
+    request_url=<MGClient.LIVE_API_URL or MGClient.SANDBOX_API_URL or "https://api.zota-sandbox.com"...>
 )
 ```
 
@@ -91,28 +94,31 @@ There are 4 environment variables that need to be set for the API SDK to be conf
 ZOTAPAY_MERCHANT_ID             - MerchantID as received from Zotapay
 ZOTAPAY_MERCHANT_SECRET_KEY     - MerchantSecretKey as received from Zotapay
 ZOTAPAY_ENDPOINT_ID             - EndpointID as received from Zotapay
-ZOTAPAY_REQUEST_URL             - https://api.zotapay-sandbox.com or https://api.zotapay.com
+ZOTAPAY_REQUEST_URL             - https://api.zota-sandbox.com or https://api.zota.com
 ```
 
-
 ### Configuration file
+
 Configuration parameters can be passed through a `.mg_env` file placed in the user's home directory.
 
 The structure of the files follows Python's [configparser](https://docs.python.org/3/library/configparser.html)
 
 Example of a '~/.mg_env' :
+
 ```
 [MG]
 merchant_id=<MerchantID as received from Zotapay>, 
 merchant_secret_key=<MerchantSecretKey as received from Zotapay>, 
 endpoint_id=<EndpointID as received from Zotapay>, 
-request_url=<MGClient.LIVE_API_URL or MGClient.SANDBOX_API_URL or "https://api.zotapay-sandbox.com"...>
+request_url=<MGClient.LIVE_API_URL or MGClient.SANDBOX_API_URL or "https://api.zota-sandbox.com"...>
 ```
 
 ## Usage
+
 In order to use the SDK we need to instantiate a client:
+
 ```python
-from zotapaysdk.client import MGClient
+from zotasdk.client import MGClient
 
 mg_client = MGClient()
 ```
@@ -122,7 +128,7 @@ mg_client = MGClient()
 A deposit request can be generated in two different ways:
 
 ```python
-from zotapaysdk.mg_requests import MGDepositRequest
+from zotasdk.mg_requests import MGDepositRequest
 
 example_deposit_request_with_kwargs = MGDepositRequest(
     merchant_order_id="QvE8dZshpKhaOmHY",
@@ -147,7 +153,6 @@ example_deposit_request_with_kwargs = MGDepositRequest(
 ```
 
 or alternatively
-
 
 ```python
 example_deposit_request = MGDepositRequest(). \
@@ -177,7 +182,7 @@ deposit_response = mg_client.send_deposit_request(example_deposit_request)
 print("Deposit Request is " + str(deposit_response.is_ok))
 ```
 
-In order to send a `Credit Card Deposit` we need to append the appropriate [Credit Card Params](https://doc.zotapay.com/deposit/1.0/?python#card-payment-integration-2)
+In order to send a `Credit Card Deposit` we need to append the appropriate [Credit Card Params](https://doc.zota.com/deposit/1.0/?python#card-payment-integration-2)
 which is achieved through sending a `MGCardDepositRequest`
 
 ```python
@@ -213,19 +218,21 @@ print("Deposit Request is " + str(deposit_response.is_ok))
 ```
 
 ### Working with `Deposit Response`
+
 Each deposit attempt against a Zotapay returns either a `MGDepositResponse` or `MGCardDepositResponse`.
 
-The above objects are simply a wrapper around the standard HTTP response as described [here](https://doc.zotapay.com/deposit/1.0/?python#issue-a-deposit-request).
+The above objects are simply a wrapper around the standard HTTP response as described [here](https://doc.zota.com/deposit/1.0/?python#issue-a-deposit-request).
 
 The response classes contain an additional helper method that validates the signature of the response when provided with a `merchant_secret_key`
- 
+
 ## Payout
+
 Sending a payout request is almost identical to sending a deposit request.
 
 The request is built:
 
 ```python
-from zotapaysdk.mg_requests import MGPayoutRequest
+from zotasdk.mg_requests import MGPayoutRequest
 
 example_payout_request = \
     MGPayoutRequest(merchant_order_id="TbbQzewLWwDW6goc",
@@ -254,11 +261,12 @@ example_payout_request = \
 The client returns `MGPayoutResponse` which is again a wrapper around the standard HTTP response.
 
 ## Callbacks
+
 `MGCallback` is a class that parses the raw HTTP Request sent from Zotapay to the configured endpoint. It's purpose
 is to make working with callbacks manageable.
 
-
 ## Validations
+
 The `MGRequest` class implements a `validate()` method which can be used for parameter validation of the request
 offline before the request is being sent. It's purpose is to check whether all the values passsed to the different
 parameters is in-line with what Zotapay's endpoint expects. See the API DOCS for more info and guidance about the
@@ -267,4 +275,3 @@ format of the different parameters.
 ## Test Coverage
 
 [![codecov](https://codecov.io/gh/zotapay/python-sdk/graphs/tree.svg?width=650&height=150&src=pr&token=5L1EYONUCU)](https://codecov.io/gh/zotapay/python-sdk/)
-

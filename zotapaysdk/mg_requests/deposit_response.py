@@ -3,13 +3,13 @@ Contains Deposit Response class definition.
 """
 import json
 import requests
-from zotapaysdk.helpers import HTTP_STATUS_OK
-from zotapaysdk.mg_requests.response import MGResponse
+from zotasdk.helpers import HTTP_STATUS_OK
+from zotasdk.mg_requests.response import MGResponse
 
 
 class MGDepositResponse(MGResponse):  # pylint: disable=too-few-public-methods
     """
-    Object that wraps around the ZotaPay Deposit Request response.
+    Object that wraps around the Zota Deposit Request response.
     """
     class Fields:  # pylint: disable=too-few-public-methods
         """
@@ -39,7 +39,7 @@ class MGDepositResponse(MGResponse):  # pylint: disable=too-few-public-methods
 
         Args:
             http_response (requests.Response): an instance of the raw requests.Response
-                as returned when the client calls the ZotaPay API
+                as returned when the client calls the Zota API
         """
         super().__init__(http_response)
         # Define all instance variables

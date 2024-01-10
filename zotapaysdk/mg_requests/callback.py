@@ -44,7 +44,7 @@ class MGCallback:
         Validates whether the signature returned in the callback is OK.
 
         Args:
-            merchant_secret_key: The secret key as provided by ZotaPay
+            merchant_secret_key: The secret key as provided by Zota
 
         Returns:
             Boolean whether the signature is verified.

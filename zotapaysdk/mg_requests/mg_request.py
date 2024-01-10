@@ -1,9 +1,9 @@
-from zotapaysdk.mg_requests.objects import ArgRequestPair, MGRequestParam
+from zotasdk.mg_requests.objects import ArgRequestPair, MGRequestParam
 
 
 class MGRequest:
     """
-    Base class for all requests to against the ZotaPay API.
+    Base class for all requests to against the Zota API.
     """
     class CommonRequestParameters:
         """

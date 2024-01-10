@@ -1,10 +1,10 @@
 # pylint: disable=missing-module-docstring
-from zotapaysdk.exceptions import MGException
+from zotasdk.exceptions import MGException
 
 
 def default_validation_function(param_name, param_value, max_size, required):
     """
-    Performs the general validation as defined by ZotaPay's API
+    Performs the general validation as defined by Zota's API
 
     Args:
         param_value:

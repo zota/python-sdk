@@ -1,8 +1,8 @@
 import pytest
 
-from zotapaysdk.client import MGClient
-from zotapaysdk.config import CredentialsKeys, MGCredentialsManager
-from zotapaysdk.exceptions import MGMissingCredentialsException
+from zotasdk.client import MGClient
+from zotasdk.config import CredentialsKeys, MGCredentialsManager
+from zotasdk.exceptions import MGMissingCredentialsException
 
 
 def test_client_environment_configuration_fail_request_url(monkeypatch):

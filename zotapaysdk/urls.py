@@ -1,5 +1,5 @@
 # pylint: disable=missing-module-docstring
-from zotapaysdk.config import ZOTAPAY_REST_API_VERSION
+from zotasdk.config import ZOTAPAY_REST_API_VERSION
 
 BASE_URL = "/api/{version}".format(**{'version': ZOTAPAY_REST_API_VERSION})
 MG_DEPOSIT_RAW_URL = BASE_URL + "/deposit/request/{endpoint_id}/"
@@ -15,7 +15,7 @@ class MGUrlsFormatter:
     @staticmethod
     def get_deposit_url(endpoint_id):
         """
-        Generates the actual URL for deposit against the ZotaPay API.
+        Generates the actual URL for deposit against the Zota API.
         Args:
             endpoint_id:
 
@@ -29,7 +29,7 @@ class MGUrlsFormatter:
     @staticmethod
     def get_order_status_url():
         """
-        Generates the actual URL for status check against the ZotaPay API.
+        Generates the actual URL for status check against the Zota API.
         Returns:
 
         """
@@ -38,7 +38,7 @@ class MGUrlsFormatter:
     @staticmethod
     def get_payout_url(endpoint_id):
         """
-        Generates the actual URL for payout against the ZotaPay API.
+        Generates the actual URL for payout against the Zota API.
         Args:
             endpoint_id:
 

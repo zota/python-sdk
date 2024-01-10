@@ -1,5 +1,5 @@
-from zotapaysdk.mg_requests.objects import MGRequestParam
-from zotapaysdk.mg_requests.mg_request import MGRequest
+from zotasdk.mg_requests.objects import MGRequestParam
+from zotasdk.mg_requests.mg_request import MGRequest
 
 
 class MGPayoutRequest(MGRequest):

@@ -1,6 +1,6 @@
 # pylint: disable=missing-class-docstring
-from zotapaysdk.mg_requests import MGDepositRequest
-from zotapaysdk.mg_requests.objects import MGRequestParam
+from zotasdk.mg_requests import MGDepositRequest
+from zotasdk.mg_requests.objects import MGRequestParam
 
 
 class MGCardDepositRequest(MGDepositRequest):
@@ -11,7 +11,7 @@ class MGCardDepositRequest(MGDepositRequest):
         """
         Class defining all that is necessary for sending a Credit Card Deposit Request.
 
-        See Also https://doc.zotapay.com/deposit/1.0/#card-payment-integration-2
+        See Also https://doc.zota.com/deposit/1.0/#card-payment-integration-2
 
         Args:
             *args:

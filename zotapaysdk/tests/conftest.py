@@ -1,6 +1,6 @@
 import pytest
 
-from zotapaysdk.client import MGClient
+from zotasdk.client import MGClient
 
 TEST_MERCHANT_ID = "SDKEXPLORER"
 TEST_MERCHANT_SECRET_KEY = "7801a7a3-0e81-481e-8f59-ee0bfef009bb"
@@ -8,7 +8,7 @@ MOCK_ENDPOINT_URL = "http://localhost:5000"
 
 
 @pytest.fixture
-def zotapaysdk_test_config():
+def zotasdk_test_config():
     pass
 
 
@@ -129,7 +129,7 @@ def deposit_request_response_ok_payload():
     return {
         "code": "200",
         "data": {
-            "depositUrl": "https://api.zotapay.com/api/v1/deposit/init/8b3a6b89697e8ac8f45d964bcc90c7ba41764acd/",
+            "depositUrl": "https://api.zota.com/api/v1/deposit/init/8b3a6b89697e8ac8f45d964bcc90c7ba41764acd/",
             "merchantOrderID": "QvE8dZshpKhaOmHY",
             "orderID": "8b3a6b89697e8ac8f45d964bcc90c7ba41764acd"
         }
