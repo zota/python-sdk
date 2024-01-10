@@ -24,8 +24,8 @@ import zotasdk
 
 class MGClient:
 
-    LIVE_API_URL = "https://api.zota.com"
-    SANDBOX_API_URL = "https://api.zota-sandbox.com"
+    LIVE_API_URL = "https://api.zotapay.com"
+    SANDBOX_API_URL = "https://api.zotapay-sandbox.com"
 
     def __init__(self, merchant_id=None, merchant_secret_key=None, endpoint_id=None,
                  request_url=None):

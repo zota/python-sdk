@@ -80,7 +80,7 @@ client = zotasdk.MGClient(
     merchant_id=<MerchantID as received from Zotapay>, 
     merchant_secret_key=<MerchantSecretKey as received from Zotapay>, 
     endpoint_id=<EndpointID as received from Zotapay>, 
-    request_url=<MGClient.LIVE_API_URL or MGClient.SANDBOX_API_URL or "https://api.zota-sandbox.com"...>
+    request_url=<MGClient.LIVE_API_URL or MGClient.SANDBOX_API_URL or "https://api.zotapay-sandbox.com"...>
 )
 ```
 
@@ -94,7 +94,7 @@ There are 4 environment variables that need to be set for the API SDK to be conf
 ZOTAPAY_MERCHANT_ID             - MerchantID as received from Zotapay
 ZOTAPAY_MERCHANT_SECRET_KEY     - MerchantSecretKey as received from Zotapay
 ZOTAPAY_ENDPOINT_ID             - EndpointID as received from Zotapay
-ZOTAPAY_REQUEST_URL             - https://api.zota-sandbox.com or https://api.zota.com
+ZOTAPAY_REQUEST_URL             - https://api.zotapay-sandbox.com or https://api.zota.com
 ```
 
 ### Configuration file
