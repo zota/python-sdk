@@ -44,4 +44,3 @@ def test_mg_order_status_response_nok(monkeypatch, mg_client_myr_sa, example_dep
     mock_response_data = order_status_check_response_nok_payload
     assert order_status_response.raw_response is not None
     assert order_status_response.error_message == mock_response_data.get(order_status_response.Fields.MESSAGE)
-

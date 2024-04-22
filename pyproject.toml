@@ -25,3 +25,6 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/zota/python-sdk"
 "Bug Tracker" = "https://github.com/zota/python-sdk/issues"
+
+[tool.pytest.ini_options]
+addopts = "--cov ./ --cov-report xml"

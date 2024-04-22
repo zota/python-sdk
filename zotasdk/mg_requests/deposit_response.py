@@ -2,7 +2,6 @@
 Contains Deposit Response class definition.
 """
 import json
-import requests
 from zotasdk.helpers import HTTP_STATUS_OK
 from zotasdk.mg_requests.response import MGResponse
 
