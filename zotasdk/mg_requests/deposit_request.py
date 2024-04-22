@@ -11,7 +11,7 @@ class MGDepositRequest(MGRequest):
     # pylint: disable=missing-function-docstring
     """
     Class containing all the parameters and logic for creating a non-CC
-    deposit request through the Zotapay API SDK.
+    deposit request through the Zota API SDK.
     """
 
     def __init__(self, **kwargs):  # pylint: disable=too-many-instance-attributes

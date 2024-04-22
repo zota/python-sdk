@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "zotasdk"
 dynamic = ['dependencies']
-version = "1.1.6"
+version = "1.2.0"
 authors = [
   { name="Zota Technology Pte Ltd", email="open-source@zota.com" },
 ]
@@ -23,5 +23,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/zotapay/python-sdk"
-"Bug Tracker" = "https://github.com/zotapay/python-sdk/issues"
+"Homepage" = "https://github.com/zota/python-sdk"
+"Bug Tracker" = "https://github.com/zota/python-sdk/issues"

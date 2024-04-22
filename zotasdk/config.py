@@ -4,7 +4,7 @@ from zotasdk.exceptions import MGMissingCredentialsException
 from os.path import expanduser
 import os
 
-ZOTAPAY_REST_API_VERSION = "v1"
+ZOTA_REST_API_VERSION = "v1"
 
 _home = expanduser("~")
 MG_CONFIG_FILE_PATH = _home
@@ -25,10 +25,10 @@ class CredentialsKeys:
         """
         Environment Variable names
         """
-        MERCHANT_ID = "ZOTAPAY_MERCHANT_ID"
-        MERCHANT_SECRET_KEY = "ZOTAPAY_MERCHANT_SECRET_KEY"
-        ENDPOINT_ID = "ZOTAPAY_ENDPOINT_ID"
-        REQUEST_URL = "ZOTAPAY_REQUEST_URL"
+        MERCHANT_ID = "ZOTA_MERCHANT_ID"
+        MERCHANT_SECRET_KEY = "ZOTA_MERCHANT_SECRET_KEY"
+        ENDPOINT_ID = "ZOTA_ENDPOINT_ID"
+        REQUEST_URL = "ZOTA_REQUEST_URL"
 
     class ConfigFile:
         """

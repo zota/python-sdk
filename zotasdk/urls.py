@@ -1,7 +1,7 @@
 # pylint: disable=missing-module-docstring
-from zotasdk.config import ZOTAPAY_REST_API_VERSION
+from zotasdk.config import ZOTA_REST_API_VERSION
 
-BASE_URL = "/api/{version}".format(**{'version': ZOTAPAY_REST_API_VERSION})
+BASE_URL = "/api/{version}".format(**{'version': ZOTA_REST_API_VERSION})
 MG_DEPOSIT_RAW_URL = BASE_URL + "/deposit/request/{endpoint_id}/"
 MG_ORDER_STATUS_RAW_URL = BASE_URL + "/query/order-status/"
 MG_PAYOUT_RAW_URL = BASE_URL + "/payout/request/{endpoint_id}/"

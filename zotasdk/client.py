@@ -30,7 +30,7 @@ class MGClient:
     def __init__(self, merchant_id=None, merchant_secret_key=None, endpoint_id=None,
                  request_url=None):
         """
-        Main client for working with Zotapay's API.
+        Main client for working with Zota's API.
 
         See more info https://doc.zota.com/deposit/1.0/?python#introduction
 
@@ -123,7 +123,7 @@ class MGClient:
 
     def _generate_deposit_request_signature(self, deposit_request):
         """
-        Generates the signature for Deposit Requests as expected by Zotapay's API.
+        Generates the signature for Deposit Requests as expected by Zota's API.
 
         See https://doc.zota.com/deposit/1.0/?python#signature
 
@@ -153,7 +153,7 @@ class MGClient:
 
     def _generate_order_status_request_signature(self, order_status_request, ts):
         """
-        Generates the signature for Order Status Requests as expected by Zotapay's API.
+        Generates the signature for Order Status Requests as expected by Zota's API.
 
         See https://doc.zota.com/deposit/1.0/?python#signature-2
 
@@ -341,7 +341,7 @@ class MGClient:
 
     def send_deposit_request(self, deposit_request):
         """
-        Signs and sends the deposit request to the Zotapay Deposit API.
+        Signs and sends the deposit request to the Zota Deposit API.
 
         Args:
             deposit_request: An instance of the Deposit Request Class
