@@ -1,4 +1,1 @@
-pytest
-pytest_httpserver
-setuptools
 requests
