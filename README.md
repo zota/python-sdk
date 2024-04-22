@@ -274,4 +274,4 @@ format of the different parameters.
 
 ## Test Coverage
 
-[![codecov](https://codecov.io/gh/Zota/python-sdk/graphs/tree.svg?width=650&height=150&src=pr&token=5L1EYONUCU)](https://codecov.io/gh/Zota/python-sdk/)
+[![codecov](https://codecov.io/gh/zota/python-sdk/graphs/tree.svg?width=650&height=150&src=pr&token=5L1EYONUCU)](https://codecov.io/gh/zota/python-sdk/)
