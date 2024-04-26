@@ -1,5 +1,5 @@
-from zotapaysdk import MGClient
-from zotapaysdk.mg_requests import MGPayoutRequest
+from zotasdk import MGClient
+from zotasdk.mg_requests import MGPayoutRequest
 
 mg_client = MGClient()
 

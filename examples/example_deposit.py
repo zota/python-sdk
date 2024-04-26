@@ -1,6 +1,6 @@
-from zotapaysdk.mg_requests import MGDepositRequest
-from zotapaysdk.client import MGClient
-from zotapaysdk.mg_requests import MGCardDepositRequest
+from zotasdk.mg_requests import MGDepositRequest
+from zotasdk.client import MGClient
+from zotasdk.mg_requests import MGCardDepositRequest
 
 client = MGClient()
 
