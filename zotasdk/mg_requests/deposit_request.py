@@ -51,6 +51,8 @@ class MGDepositRequest(MGRequest):
             End user IPv4/IPv6 address
         :param customer_bank_code:
             End user bank code
+        :param customer_bank_account_number:
+            End user bank account number
         :param redirect_url:
             URL for end user redirection upon transaction completion.
         :param callback_url:
@@ -181,6 +183,14 @@ class MGDepositRequest(MGRequest):
                                self.DepositRequestParameters.CUSTOMER_BANK_CODE.arg_name,
                                None),
                            max_size=11,
+                           required=False)
+
+        self._customer_bank_account_number = \
+            MGRequestParam(self.DepositRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER.request_param_name,
+                           kwargs.get(
+                               self.DepositRequestParameters.CUSTOMER_BANK_ACCOUNT_NUMBER.arg_name,
+                               None),
+                           max_size=64,
                            required=False)
 
         self._redirect_url = \
@@ -335,6 +345,14 @@ class MGDepositRequest(MGRequest):
 
     def set_customer_bank_code(self, value):
         self._customer_bank_code.set_value(value)
+        return self
+
+    @property
+    def customer_bank_account_number(self):
+        return self._customer_bank_account_number.param_value
+
+    def set_customer_bank_account_number(self, value):
+        self._customer_bank_account_number.set_value(value)
         return self
 
     @property

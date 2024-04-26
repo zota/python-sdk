@@ -32,6 +32,7 @@ class MGRequest:
         CUSTOMER_PHONE = ArgRequestPair("customer_phone", "customerPhone")
         CUSTOMER_IP = ArgRequestPair("customer_ip", "customerIP")
         CUSTOMER_BANK_CODE = ArgRequestPair("customer_bank_code", "customerBankCode")
+        CUSTOMER_BANK_ACCOUNT_NUMBER = ArgRequestPair("customer_bank_account_number", "customerBankAccountNumber")
         REDIRECT_URL = ArgRequestPair("redirect_url", "redirectUrl")
         CHECKOUT_URL = ArgRequestPair("checkout_url", "checkoutUrl")
         LANGUAGE = ArgRequestPair("language", "language")
