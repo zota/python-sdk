@@ -3,9 +3,10 @@
 ![Python Matrix Test](https://github.com/zota/python-sdk/workflows/Python%20Matrix%20Test/badge.svg)
 [![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://pypi.org/project/zotasdk/)
 
-![python-github](https://user-images.githubusercontent.com/174284/106497606-f0221600-64c6-11eb-9d98-a6ad1b355e6a.jpg)
+![Python SDK](https://github.com/user-attachments/assets/f4db6e3d-3559-4ea5-b1d3-10ff14236db8)
 
-# Official Python REST API SDK
+
+# Official Zota Python SDK
 
 This is the **official** page of the [Zota](http://www.zota.com) Python SDK. It is intended to be used by
 developers who run modern Python applications and would like to integrate our next generation payments platform.
