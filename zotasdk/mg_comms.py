@@ -1,5 +1,6 @@
 import ssl
 import requests
+import certifi
 
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.poolmanager import PoolManager
@@ -39,12 +40,13 @@ def mg_request(method="post", url=None, data=None, json=None, **kwargs):
 
     """
     with requests.sessions.Session() as _session:
-        _adapter = _MGTLSAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
+        _adapter = _MGTLSAdapter()
 
         _session.mount("http://", _adapter)
         _session.mount("https://", _adapter)
 
         return _session.request(method=method,
                                 url=url,
+                                verify=certifi.where(),
                                 data=data,
                                 json=json, **kwargs)
