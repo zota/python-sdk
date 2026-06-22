@@ -1,9 +1,11 @@
+import os
 import pytest
 
 from zotasdk.client import MGClient
 
 TEST_MERCHANT_ID = "SDKEXPLORER"
-TEST_MERCHANT_SECRET_KEY = "7801a7a3-0e81-481e-8f59-ee0bfef009bb"
+TEST_MERCHANT_SECRET_KEY = os.getenv('API_MERCHANT_SECRET_KEY', '7801a7a3-0e81-481e-8f59-ee0bfef009bb')
+STATIC_TEST_SECRET = '7801a7a3-0e81-481e-8f59-ee0bfef009bb'
 MOCK_ENDPOINT_URL = "http://localhost:5000"
 
 
@@ -178,6 +180,14 @@ def order_status_check_response_ok_payload():
             "timestamp": "1564617600"
         }
     }}
+
+
+@pytest.fixture
+def mg_client_myr_sa_static():
+    return MGClient(merchant_id=TEST_MERCHANT_ID,
+                    merchant_secret_key=STATIC_TEST_SECRET,
+                    endpoint_id="503368",
+                    request_url=MGClient.SANDBOX_API_URL)
 
 
 @pytest.fixture

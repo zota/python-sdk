@@ -1,2 +1,2 @@
-requests
-certifi
+requests==2.34.2
+certifi==2026.6.17
