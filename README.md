@@ -1,7 +1,7 @@
-[![PyPI](https://img.shields.io/badge/zotasdk-v1.2.2-blue)](https://pypi.org/project/zotasdk/)
+[![PyPI](https://img.shields.io/badge/zotasdk-v1.2.3-blue)](https://pypi.org/project/zotasdk/)
 [![Codecov](https://codecov.io/gh/zota/python-sdk/branch/master/graph/badge.svg?token=5L1EYONUCU)](https://codecov.io/gh/zota/python-sdk)
 ![Python Matrix Test](https://github.com/zota/python-sdk/workflows/Python%20Matrix%20Test/badge.svg)
-[![Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://pypi.org/project/zotasdk/)
+[![Python Versions](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue)](https://pypi.org/project/zotasdk/)
 
 ![Python SDK](https://github.com/user-attachments/assets/f4db6e3d-3559-4ea5-b1d3-10ff14236db8)
 
