@@ -4,7 +4,7 @@ import pytest
 from zotasdk.client import MGClient
 
 TEST_MERCHANT_ID = "SDKEXPLORER"
-TEST_MERCHANT_SECRET_KEY = os.getenv('API_MERCHANT_SECRET_KEY', 'test-secret-key-placeholder')
+TEST_MERCHANT_SECRET_KEY = os.getenv('API_MERCHANT_SECRET_KEY', '7801a7a3-0e81-481e-8f59-ee0bfef009bb')
 MOCK_ENDPOINT_URL = "http://localhost:5000"
 
 
