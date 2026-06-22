@@ -12,6 +12,6 @@ setup(
     author_email='open-source@zota.com',
     license='APACHE-2.0',
     packages=find_packages(),
-    install_requires=['requests'],
+    install_requires=['requests==2.34.2'],
     zip_safe=False
 )
