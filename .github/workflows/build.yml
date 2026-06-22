@@ -53,6 +53,8 @@ jobs:
     - name: Test with pytest
       run: |
         python -m pytest
+      env:
+        API_MERCHANT_SECRET_KEY: ${{ secrets.API_MERCHANT_SECRET_KEY }}
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v4
       with:
