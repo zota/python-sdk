@@ -2,25 +2,25 @@ from zotasdk.mg_requests.payout_request import MGPayoutRequest
 from zotasdk.mg_requests import MGDepositRequest
 
 
-def test_mg_deposit_signature(mg_client_myr_sa, example_deposit_payload):
+def test_mg_deposit_signature(mg_client_myr_sa_static, example_deposit_payload):
     expected_signature = "e2f97591b19ea8ad9d2421e0bafb333349eca03e94940a91fae68dec891e419c"
 
     # Create the deposit request
     deposit_request = MGDepositRequest(**example_deposit_payload)
 
     # Generate the signature
-    signature = mg_client_myr_sa._generate_deposit_request_signature(deposit_request=deposit_request)
+    signature = mg_client_myr_sa_static._generate_deposit_request_signature(deposit_request=deposit_request)
 
     assert signature == expected_signature
 
 
-def test_mg_payout_signature(mg_client_myr_sa, example_payout_payload):
+def test_mg_payout_signature(mg_client_myr_sa_static, example_payout_payload):
     expected_signature = "6a7394981a9543c2eb963cfbd1847eaf7c635d0e896e31b56d6bcba902717312"
     # d04ccb6a14d2c9e6f566766b8158bc4dd5ab6c3bb964a446da92aa61b882d88b
 
     payout_request = MGPayoutRequest(**example_payout_payload)
 
-    signature = mg_client_myr_sa._generate_payout_request_signature(payout_request)
+    signature = mg_client_myr_sa_static._generate_payout_request_signature(payout_request)
 
     assert signature == expected_signature
 
